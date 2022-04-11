@@ -91,7 +91,9 @@ void setup()
   Serial.begin(115200);
   // USER CODE EXAMPLE : meta data update
   // USER CODE EXAMPLE
-
+  pixels.begin();
+  pixels.clear();
+  
   initDevice();
   // If not configured it'll be configured and rebooted in the initDevice(),
   // If configured, initDevice will set the proper setting to cfg variable
@@ -126,8 +128,6 @@ void loop()
   // USER CODE EXAMPLE : main loop
   //     you can put any main code here, for example,
   //     the continous data acquistion and local intelligence can be placed here
-  pixels.begin();
-  pixels.clear();
 
   // USER CODE EXAMPLE
   client.loop();
